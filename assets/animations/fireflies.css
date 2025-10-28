@@ -1,0 +1,41 @@
+.firefly-layer {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.firefly {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 239, 214, 0.85), rgba(255, 239, 214, 0));
+  animation: firefly-glow 8s ease-in-out infinite;
+  filter: drop-shadow(0 0 6px rgba(255, 220, 186, 0.9));
+}
+
+.firefly:nth-child(odd) {
+  animation-delay: 2s;
+}
+
+.firefly:nth-child(3n) {
+  animation-duration: 10s;
+}
+
+@keyframes firefly-glow {
+  0% {
+    opacity: 0;
+    transform: translate3d(-5vw, -10vh, 0) scale(0.65);
+  }
+  25% {
+    opacity: 1;
+  }
+  50% {
+    transform: translate3d(10vw, 5vh, 0) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translate3d(20vw, 15vh, 0) scale(0.6);
+  }
+}

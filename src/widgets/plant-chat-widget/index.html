@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Plant Chat Widget</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="chat-overlay" data-align="bottom">
+      <div class="chat-overlay__header">
+        <div class="chat-overlay__title">Cozy Garden Chat</div>
+        <div class="chat-overlay__status">
+          <span class="chat-overlay__goal-label">Community Goals Blooming</span>
+        </div>
+      </div>
+      <div class="chat-overlay__messages" id="message-container"></div>
+      <template id="chat-message-template">
+        <article class="chat-message" data-role="viewer">
+          <header class="chat-message__meta">
+            <span class="chat-message__badge" hidden></span>
+            <span class="chat-message__user">User</span>
+            <span class="chat-message__pronouns" hidden>(they/them)</span>
+            <span class="chat-message__role" hidden>mod</span>
+          </header>
+          <p class="chat-message__body"></p>
+        </article>
+      </template>
+      <template id="event-alert-template">
+        <article class="chat-event" data-type="follow">
+          <p class="chat-event__text"></p>
+        </article>
+      </template>
+    </div>
+    <div class="stream-decoration">
+      <div class="stream-decoration__leaf"></div>
+      <div class="stream-decoration__leaf stream-decoration__leaf--alt"></div>
+    </div>
+    <script src="./widget.js" type="module"></script>
+  </body>
+</html>
