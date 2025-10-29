@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Plant Chat Widget</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="chat-overlay" data-align="bottom">
+      <div class="chat-overlay__glow chat-overlay__glow--one"></div>
+      <div class="chat-overlay__glow chat-overlay__glow--two"></div>
+      <header class="chat-overlay__header">
+        <div class="chat-overlay__title">
+          <span class="chat-overlay__title-icon" aria-hidden="true">⋆⋆⋆</span>
+          <span class="chat-overlay__title-text">chatbox</span>
+        </div>
+        <div class="chat-overlay__indicator" aria-hidden="true">
+          <span class="chat-overlay__indicator-heart">♡</span>
+          <span class="chat-overlay__indicator-heart">♡</span>
+          <span class="chat-overlay__indicator-heart">♡</span>
+        </div>
+      </header>
+      <div class="chat-overlay__messages" id="message-container" aria-live="polite"></div>
+      <template id="chat-message-template">
+        <article class="chat-message" data-role="viewer" data-size="sm">
+          <span class="chat-message__icon" aria-hidden="true">💬</span>
+          <div class="chat-message__content">
+            <header class="chat-message__meta">
+              <span class="chat-message__badge" hidden></span>
+              <span class="chat-message__user">cozysprites</span>
+              <span class="chat-message__pronouns" hidden>(they/them)</span>
+              <span class="chat-message__role" hidden>viewer</span>
+            </header>
+            <p class="chat-message__text">hi friend!</p>
+          </div>
+        </article>
+      </template>
+      <template id="event-alert-template">
+        <article class="chat-event" data-variant="default">
+          <span class="chat-event__icon" aria-hidden="true">⭐</span>
+          <div class="chat-event__content">
+            <p class="chat-event__label">Special moment</p>
+            <p class="chat-event__text"></p>
+          </div>
+        </article>
+      </template>
+    </div>
+    <div class="stream-decoration" aria-hidden="true">
+      <span class="sparkle sparkle--one"></span>
+      <span class="sparkle sparkle--two"></span>
+      <span class="sparkle sparkle--three"></span>
+      <span class="sparkle sparkle--four"></span>
+    </div>
+    <script src="./widget.js" type="module"></script>
+  </body>
+</html>
