@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nature Goal Widget</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="goal-widget" role="meter" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+      <header class="goal-widget__header">
+        <h1 class="goal-widget__title" id="goal-title">Goal Tracker</h1>
+        <span class="goal-widget__type" id="goal-type">Followers</span>
+      </header>
+      <div class="goal-widget__progress">
+        <div class="goal-widget__fill" id="goal-fill"></div>
+        <div class="goal-widget__firefly"></div>
+      </div>
+      <footer class="goal-widget__footer">
+        <span class="goal-widget__value" id="goal-value">0 / 100</span>
+        <span class="goal-widget__remaining" id="goal-remaining">100 to go</span>
+      </footer>
+    </div>
+    <script src="./widget.js" type="module"></script>
+  </body>
+</html>
